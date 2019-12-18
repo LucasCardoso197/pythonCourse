@@ -138,3 +138,22 @@ def summer_69(arr):
 #print(summer_69([1, 3, 5]))
 #print(summer_69([4, 5, 6, 7, 8, 9]))
 #print(summer_69([2, 1, 6, 9, 11]))
+
+def unique_list(mylist):
+    myset = set(mylist)
+    return list(myset)
+
+#print(unique_list([1,1,1,1,2,2,3,3,3,3,4,5]))
+
+import string
+
+def isPangram(text, alphabet=string.ascii_lowercase):
+    textLetters = set(text)
+    for letter in alphabet:
+        if not letter in textLetters:
+            return False
+    return True
+
+#print(isPangram('The quick brown fox jumps over the lazy dog'))
+#print(isPangram('abcdefg hijklmnopqrstuv wxyz'))
+#print(isPangram('abcdefg hijklmnopqrstuv wxy'))
